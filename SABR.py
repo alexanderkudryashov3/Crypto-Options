@@ -1,8 +1,9 @@
 import torch
+from torch.distributions import normal
 
 class SABR:
     def __init__(self):
-        pass
+        self.params = None
 
     def sigma_SABR(self, params, x1, beta=0.5):
         K, S, t = x1
@@ -23,3 +24,23 @@ class SABR:
         sigma = alpha * numerator / denominator * z / x
 
         return sigma
+
+    def set_params(self, params):
+        self.params = params
+
+    def d1(self, S, K, t, sigma, r=0):
+        return (torch.log(S / K) + (r + sigma ** 2 / 2.) * t) / (sigma * torch.sqrt(t))
+
+    def d2(self, S, K, t, sigma, r=0):
+        return self.d1(S, K, t, sigma, r) - sigma * torch.sqrt(t)
+
+    def bs_call(self, x1, r=0):
+        norm = normal.Normal(0, 1)
+        K, S, t = x1
+        sigma = self.sigma_SABR(self.params, x1, beta=0.5)
+        return S * norm.cdf(self.d1(S, K, t, sigma, r)) - K * torch.exp(-r * t) * norm.cdf(self.d2(S, K, t, sigma, r))
+
+    def bs_put(self, x1, r=0):
+        K, S, t = x1
+        sigma = self.sigma_SABR(self.params, x1, beta=0.5)
+        return K * torch.exp(-r * t) - S * self.bs_call(S, K, t, sigma, r)
