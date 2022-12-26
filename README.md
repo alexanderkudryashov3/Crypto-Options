@@ -35,5 +35,7 @@ Implementing other stochastic volatility models, for example, Heston model.
 Testing different options trading strategies and looking for potential arbitrage opportunities on this market.
 
 
+
+
 [1] P. S. Hagan, D. Kumar, A. Lesniewski, D. E. Woodward: Managing Smile Risk, http://www.math.ku.dk/~rolf/SABR.pdf, 2002.
 
