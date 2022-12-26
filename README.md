@@ -16,8 +16,8 @@ Non-linear least squares problem is solved using Levenberg–Marquardt algorithm
 ## Results
 The main result of the project is the calibrated volatility surface (SABR calibration.ipynb):
 
-![ezgif-1-54076948dd](https://user-images.githubusercontent.com/60070857/209576440-45c0b193-d70c-42aa-9442-f90501aa5ae7.gif)
-![ezgif-1-6b1ab8a88d](https://user-images.githubusercontent.com/60070857/209576443-42db3aab-c974-4dbf-af22-ef6912091cdd.gif)
+![ezgif-1-54076948dd](https://user-images.githubusercontent.com/60070857/209576440-45c0b193-d70c-42aa-9442-f90501aa5ae7.gif?raw=true)
+![ezgif-1-6b1ab8a88d](https://user-images.githubusercontent.com/60070857/209576443-42db3aab-c974-4dbf-af22-ef6912091cdd.gif?raw=true)
 
 
 Volatility smile has been modeled fairly well:
