@@ -19,11 +19,16 @@ The main result of the project is the calibrated volatility surface (SABR calibr
 ![ezgif-1-54076948dd](https://user-images.githubusercontent.com/60070857/209576440-45c0b193-d70c-42aa-9442-f90501aa5ae7.gif)
 ![ezgif-1-6b1ab8a88d](https://user-images.githubusercontent.com/60070857/209576443-42db3aab-c974-4dbf-af22-ef6912091cdd.gif)
 
+
 Volatility smile has been modeled fairly well:
+
 <img width="453" alt="Screenshot 2022-12-26 at 10 17 54 PM" src="https://user-images.githubusercontent.com/60070857/209577855-c3ea9547-e74d-4456-b141-b43dd64ccebb.png">
 
+
 Testing on new data (test SABR calibration.ipynb) also shows good perfomance:
-<img width="456" alt="Screenshot 2022-12-26 at 10 20 07 PM" src="https://user-images.githubusercontent.com/60070857/209577977-5c22a632-5e43-497a-8a3d-728c8ea6f549.png">
+
+<img width="447" alt="Screenshot 2022-12-26 at 10 26 47 PM" src="https://user-images.githubusercontent.com/60070857/209578353-ef42b95d-22e4-4f09-9585-0f7efdf6239b.png">
+
 
 ##Future development
 Implementing other stochastic volatility models, for example, Heston model.
@@ -32,4 +37,3 @@ Testing different options trading strategies and looking for potential arbitrage
 
 [1] P. S. Hagan, D. Kumar, A. Lesniewski, D. E. Woodward: Managing Smile Risk, http://www.math.ku.dk/~rolf/SABR.pdf, 2002.
 
-![Volatility surface](https://user-images.githubusercontent.com/60070857/201958983-dfca6422-d71a-4f48-9c5c-d1d123b2b147.png)
